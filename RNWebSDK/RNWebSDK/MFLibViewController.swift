@@ -33,6 +33,10 @@ public class MFLibViewController: UIViewController, UIImagePickerControllerDeleg
         weakSelf.present(vc, animated: true)
     }
     
-    
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        
+    }
     
 }
