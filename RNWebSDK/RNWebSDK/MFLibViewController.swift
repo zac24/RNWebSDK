@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import MobileCoreServices
+import MediaPlayer
 import UIKit
 import AVFoundation
 import AVKit
