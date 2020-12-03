@@ -59,7 +59,7 @@ public class MFLibViewController: UIViewController, UIImagePickerControllerDeleg
         weakSelf.present(vc, animated: true)
     }
     
-    public func recordVideo() {
+    public static func recordVideo() {
         
         let vc = UIImagePickerController()
         
@@ -72,8 +72,13 @@ public class MFLibViewController: UIViewController, UIImagePickerControllerDeleg
         }
         
         vc.allowsEditing = true
-        vc.delegate = self
-        present(vc, animated: true)
+        
+        let weakSelf = MFLibViewController()
+        vc.delegate = weakSelf
+        weakSelf.present(vc, animated: true)
+        
+//        vc.delegate = self
+//        present(vc, animated: true)
     }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
